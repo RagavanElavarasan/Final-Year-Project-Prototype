@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1069815825405",
+    "project_id": "touristgeofence",
+    "storage_bucket": "touristgeofence.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1069815825405:android:cb0b343de77107fc73cf94",
+        "android_client_info": {
+          "package_name": "com.example.tourist_geo_fencing"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCmR35pkYGRwqh68977-73CZZLjaJJFErE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
