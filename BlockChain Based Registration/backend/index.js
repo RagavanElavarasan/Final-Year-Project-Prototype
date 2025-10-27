@@ -7,6 +7,7 @@ const { ethers } = require('ethers');
 const Tourist = require('./models/Tourist');
 const { admin, db } = require('./firebase-config');
 
+
 const app = express();
 app.use(bodyParser.json());
 const cors = require('cors');
