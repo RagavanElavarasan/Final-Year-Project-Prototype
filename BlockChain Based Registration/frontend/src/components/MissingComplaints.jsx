@@ -428,6 +428,9 @@ const generateEFIRPDF = (tourist, alert) => {
     // Page 2: Comprehensive Summary
     doc.addPage();
 
+    doc.setDrawColor(0, 0, 128);
+    doc.setLineWidth(0.5);
+    doc.rect(10, 10, 190, 277);
     // Summary Header
     doc.setFontSize(14);
     doc.setFont("helvetica", "bold");
@@ -454,6 +457,7 @@ const generateEFIRPDF = (tourist, alert) => {
     const summaryLines = doc.splitTextToSize(summaryText, 170);
     let summaryYPosition = 65;
 
+    
     summaryLines.forEach((line) => {
       if (summaryYPosition > 250) {
         doc.addPage();
