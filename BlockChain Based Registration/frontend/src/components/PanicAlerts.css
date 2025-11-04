@@ -12,7 +12,15 @@
   --shadow: 0 8px 32px rgba(0,0,0,0.1);
 }
 
-.dashboard-container { padding: 20px; color: var(--text); background: var(--bg); min-height: 100%; }
+.dashboard-container {
+  padding: 20px;
+  color: var(--text);
+  background: var(--bg);
+  min-height: 100%;
+  width: 99%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
 
 .dashboard-header {
   display: flex;
@@ -64,9 +72,19 @@
 .error-icon { font-size: 20px; margin-bottom: 8px; }
 .empty-icon { font-size: 32px; margin-bottom: 6px; }
 
-.tourists-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; }
+.tourists-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+  width: 100%;
+}
 
-.tourist-card-wrapper { display: flex; flex-direction: column; gap: 10px; }
+.tourist-card-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 100%;
+}
 
 .alert-block {
   background: rgba(245, 158, 11, 0.1);
@@ -81,6 +99,8 @@
   border-radius: 14px;
   box-shadow: var(--shadow);
   overflow: hidden;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .tourist-card.compact .info-value div { line-height: 1.35; }
@@ -124,13 +144,21 @@
 .validity-info { color: var(--muted); font-size: 12px; }
 
 /* Skeletons */
-.skeleton-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; }
+.skeleton-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+  width: 100%;
+}
+
 .skeleton-card {
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: 14px;
   box-shadow: var(--shadow);
   padding: 12px 14px;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 .skeleton { position: relative; overflow: hidden; background: #e5e7eb; border-radius: 8px; }
 .skeleton.header { height: 40px; margin-bottom: 12px; }

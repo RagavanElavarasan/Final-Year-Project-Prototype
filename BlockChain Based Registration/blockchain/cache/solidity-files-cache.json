@@ -1,44 +1,8 @@
 {
   "_format": "hh-sol-cache-2",
   "files": {
-    "E:\\SIH Prototype\\BlockChain Based Registration\\blockchain\\contracts\\TouristRegistry.sol": {
-      "lastModificationDate": 1758640272906,
-      "contentHash": "c051baf950bddeef636bda5f78e5639d",
-      "sourceName": "contracts/TouristRegistry.sol",
-      "solcConfig": {
-        "version": "0.8.27",
-        "settings": {
-          "evmVersion": "paris",
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "TouristRegistry"
-      ]
-    },
-    "E:\\Final Year Project Prototype\\BlockChain Based Registration\\blockchain\\contracts\\TouristRegistry.sol": {
-      "lastModificationDate": 1759419979416,
+    "C:\\Projects\\Final-Year-Project-Prototype\\BlockChain Based Registration\\blockchain\\contracts\\TouristRegistry.sol": {
+      "lastModificationDate": 1761617793269,
       "contentHash": "c051baf950bddeef636bda5f78e5639d",
       "sourceName": "contracts/TouristRegistry.sol",
       "solcConfig": {

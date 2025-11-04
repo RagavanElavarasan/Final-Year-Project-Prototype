@@ -51,24 +51,41 @@
 
 .loading,
 .error-message,
-.empty-state { 
+.empty-state {
   border: 1px dashed var(--border);
   border-radius: 12px;
-  padding: 18px;
+  padding: 40px 20px;
   text-align: center;
   color: var(--muted);
   background: rgba(248, 250, 252, 0.6);
 }
 
+.empty-icon {
+  font-size: 48px;
+  margin-bottom: 12px;
+  opacity: 0.7;
+}
 .error-message { color: #fecaca; border-color: rgba(239, 68, 68, .35); }
 .error-icon { font-size: 20px; margin-bottom: 8px; }
-.empty-icon { font-size: 32px; margin-bottom: 6px; }
+
 
 .tourists-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 20px;
+  width: 100%;
 }
+
+.tourist-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
 
 .tourist-card-wrapper { display: flex; flex-direction: column; gap: 10px; }
 
@@ -79,13 +96,7 @@
   padding: 12px 14px;
 }
 
-.tourist-card {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  box-shadow: var(--shadow);
-  overflow: hidden;
-}
+
 
 .tourist-card.compact .info-value div { line-height: 1.35; }
 
@@ -96,7 +107,18 @@
   padding: 12px 14px;
   border-bottom: 1px solid var(--border);
   background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  gap: 8px;
 }
+
+.card-header .card-number {
+  flex-shrink: 0;
+}
+
+.card-header .card-id {
+  flex-grow: 1;
+  justify-content: flex-start;
+}
+
 
 .card-number { color: var(--muted); font-size: 12px; }
 .card-id { display:flex; align-items:center; gap:8px; }
@@ -123,6 +145,11 @@
 
 .status-badge { display: inline-flex; align-items:center; gap: 6px; border-radius: 999px; padding: 4px 10px; font-size: 12px; border: 1px solid var(--border); }
 .status-badge.verified { color: #059669; background: rgba(34, 197, 94, 0.1); border-color: rgba(34, 197, 94, 0.2); }
+.status-badge.missing {
+  color: #dc2626;
+  background: rgba(239, 68, 68, 0.1);
+  border-color: rgba(239, 68, 68, 0.2);
+}
 .status-badge.expired { color: #dc2626; background: rgba(239, 68, 68, 0.1); border-color: rgba(239, 68, 68, 0.2); }
 .status-icon { font-size: 14px; }
 .validity-info { color: var(--muted); font-size: 12px; }
@@ -148,6 +175,32 @@
   transform: translateX(-100%);
   background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.6) 50%, rgba(255,255,255,0) 100%);
   animation: shimmer 1.2s infinite;
+}
+
+.download-btn {
+  background: #059669;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  box-shadow: 0 2px 8px rgba(5, 150, 105, 0.25);
+}
+
+.download-btn:hover {
+  background: #047857;
+  box-shadow: 0 4px 12px rgba(5, 150, 105, 0.35);
+  transform: translateY(-1px);
+}
+
+.download-btn:active {
+  transform: translateY(0);
 }
 
 @keyframes shimmer {
